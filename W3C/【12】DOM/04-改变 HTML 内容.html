@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>改变 HTML 内容</title>
+</head>
+<body>
+
+<p id = "p1">Hello World!</p>
+<h1 id = "header">Older Header</h1>
+
+<script>
+	document.getElementById("p1").innerHTML = "New text!";
+	var element = document.getElementById("header");
+	element.innerHTML = "New Header";
+</script>
+
+<p>上面的段落被一条 Javascript 脚本修改了。</p>
+<p>"Old Header" 已被修改为 "New Header"。</p>
+
+</body>
+</html>
