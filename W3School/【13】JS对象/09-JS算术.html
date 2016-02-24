@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS算术</title>
+</head>
+<body>
+
+<script>
+
+	function writeInLine(value) {
+		document.write(value + "<br>");
+	}
+
+	// 四舍五入
+	function writeRound() {
+		document.write(Math.round(0.60) + "<br>");
+		document.write(Math.round(0.50) + "<br>");
+		document.write(Math.round(0.49) + "<br>");
+		document.write(Math.round(-4.40) + "<br>");
+		document.write(Math.round(-4.60) + "<br>");
+	}
+
+	// 使用 random() 来返回 0 到 1 之间的随机数
+	function writeRandom() {
+		document.writeln(Math.random());
+	}
+
+	function writeMax() {
+		writeInLine(Math.max(5, 7));
+		writeInLine(Math.max(-3, 5));
+		writeInLine(Math.max(-3, -5));
+		writeInLine(Math.max(7.25, 7.30));
+	}
+
+	// writeRound();
+	// writeRandom();
+	writeMax();
+</script>
+
+</body>
+</html>

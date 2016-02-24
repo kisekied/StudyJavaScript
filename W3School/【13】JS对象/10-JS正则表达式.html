@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS正则表达式</title>
+</head>
+<body>
+
+<script>
+	function print(value) {
+		document.write(value + "<br>");
+	}
+
+	// test() 方法检索字符串中的指定值
+	// 返回值是 true 或 false
+	function regExpTest() {
+		var patt1 = new RegExp("e");
+		print(patt1.test("The best things in life are free"));
+	}
+
+	// exec()方法检索字符串中的指定值。
+	// 返回值是被找到的值。如果没有发现匹配，则返回 null。
+	function regExpExec() {
+		var patt1 = new RegExp("e");
+		print(patt1.exec("The best things in life are free"));
+	}
+
+	// 可以向 RegExp 对象添加第二个参数，以设定检索。
+	// 如果需要找到所有某个字符的所有存在，则可以使用 "g" 参数 ("global")
+	function regExpExec2() {
+		var patt1 = new RegExp("e", "g");
+
+		do {
+			result = patt1.exec("The best things in life are free");
+			print(result);
+		} while (result != null)
+	}
+
+    // compile() 方法用于改变 RegExp
+    // compile() 既可以改变检索模式，也可以添加或删除第二个参数
+	function regExpCompile() {
+		var patt1 = new RegExp("e");
+		print(patt1.test("The best things in life are free"));
+
+		patt1.compile("d");
+
+		print(patt1.test("The best things in life are free"));
+	}
+
+
+	// regExpTest();
+	// regExpExec();
+	// regExpExec2();
+	regExpCompile();
+
+</script>
+
+</body>
+</html>

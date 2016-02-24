@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Date（日期）对象 实例</title>
+</head>
+<body onload="startTime()">
+
+<script>
+	document.write(Date() + "<br>");
+
+	var d = new Date();
+	// getTime() 返回从 1970 年 1 月 1 日至今的毫秒数。
+	document.write("从 1970/01/01 至今已过去 " + d.getTime() + " 毫秒"+ "<br>");
+
+	// 使用 setFullYear() 设置具体的日期
+	d.setFullYear(1992,10,3);
+	document.write(d + "<br>");
+
+	// 使用 toUTCString() 将当日的日期（根据 UTC）转换为字符串
+	document.write(d.toUTCString() + "<br>");
+
+	// 使用 getDay() 和数组来显示星期，而不仅仅是数字
+	var d = new Date();
+	var weekday = new Array();
+	weekday[0] = "星期日";
+	weekday[1] = "星期一";
+	weekday[2] = "星期二";
+	weekday[3] = "星期三";
+	weekday[4] = "星期四";
+	weekday[5] = "星期五";
+	weekday[6] = "星期六";
+
+	document.write(d.getDay() + "<br>");
+	document.write("今天是" + weekday[d.getDay() + "<br>"]);
+
+	// 显示钟表
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+		t = setTimeout('startTime()', 500)
+	}
+	
+
+	function checkTime(i) {
+		if (i < 10) {
+			i = "0" + i;
+		}
+		return i;
+	}
+</script>
+
+<div id = "txt"></div>
+
+</body>
+</html>

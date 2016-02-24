@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>比较日期</title>
+</head>
+<body>
+
+<script>
+	var myDate = new Date();
+	document.write(myDate + "<br>");
+	myDate.setFullYear(2008,8,9);
+	document.write(myDate + "<br>");
+
+	var today = new Date();
+	if (myDate > today) {
+		alert("Today is before 9th August 2008");
+	} else{
+		alert("Today is after 9th August 2008");
+	};
+</script>
+
+</body>
+</html>
