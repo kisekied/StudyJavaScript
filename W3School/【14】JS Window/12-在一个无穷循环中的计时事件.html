@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在一个无穷循环中的计时事件</title>
+	<script>
+		var c = 0;
+		var t;
+		function timedCount() {
+			document.getElementById('txt').value = c;
+			c += 1;
+			t = setTimeout("timedCount()", 1000);
+		}
+	</script>
+</head>
+<body>
+
+<form>
+	<input type="button" name="" onclick="timedCount()" value="开始计时！">
+	<input type="text" id = "txt">
+</form>
+
+<p>请点击上面的按钮。输入框会从0开始一直进行计时。</p>
+
+</body>
+</html>
